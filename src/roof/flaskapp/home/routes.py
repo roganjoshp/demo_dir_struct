@@ -1,6 +1,7 @@
+from flask import render_template
+
 from roof.flaskapp.home import bp
 from roof.util import do_something
-from flask import render_template
 
 
 @bp.route("/", methods=["GET"])
