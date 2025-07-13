@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roof"
+authors = [
+    {"name" = "roganjosh", "email" = "someone@hotmail.com"},
+]
+version = "0.0.1"
+description = "A demo library"
+
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+dependencies=[
+    "pytest", 
+    "ruff",
+    "flask",
+    "flask-wtf"
+]
+
+[project.urls]
+Source = "https://github.com/roganjoshp/eulogy"
+
+[tool.ruff]
+src = ["src"]
+fix = true
+line-length = 79
+indent-width = 4
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle error
+    "F",  # pyflakes
+    "I",  # isort
+    "UP", # pyupgrade
+    "W",  # pycodestyle warning
+]
+ignore-init-module-imports = true
+
+[tool.ruff.lint.isort]
+force-single-line = false
+order-by-type = true
